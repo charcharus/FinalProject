@@ -12,4 +12,9 @@ class KomentarPertanyaan extends Model
     {
     	return $this->belongsTo(User::class);
     }
+
+    public function pertanyaan()
+    {
+    	return $this->belongsTo(Pertanyaan::class);
+    }
 }

@@ -13,4 +13,19 @@ class Pertanyaan extends Model
     {
     	return $this->belongsTo(User::class);
     }
+
+    public function jawaban()
+    {
+    	return $this->hasMany(Jawaban::class);
+    }
+
+    public function komentar_pertanyaan()
+    {
+    	return $this->hasMany(KomentarPertanyaan::class);
+    }
+
+    public function vote_pertanyaan()
+    {
+    	return $this->hasMany(VotePertanyaan::class);
+    }
 }
