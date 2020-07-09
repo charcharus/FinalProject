@@ -20,11 +20,6 @@
     </div>
     
     <div class="form-group">
-		<label for="">Isi</label>
-		<input type="text" class="form-control" name="isi" value="{{$pertanyaan->isi}}">
-    </div>
-    
-    <div class="form-group">
 		<label for="">Tag</label>
 		<input type="text" class="form-control" name="tag" value="{{$pertanyaan->tag}}">
     </div>
@@ -33,6 +28,10 @@
 				<label for="">ID Penanya</label>
 				<input type="text" class="form-control" name="user_id" placeholder="Isi id penanya yang sudah terdaftar" value="{{$pertanyaan->user_id}}">
 	</div>
+
+	<div class="form-group">
+		<label for="">Isi</label>
+		<textarea id="konten" class="form-control" name="isi" rows="10" cols="50" value="{{$pertanyaan->isi}}"></textarea>
 
     <div class="form-group">
 		<input type="submit" class="btn btn-warning" value="Update">
@@ -45,3 +44,17 @@
 	</div>            
 
 @endsection
+
+@push('scripts')
+
+<script src="{{asset('/ckeditor/ckeditor.js')}}"></script>
+
+<script>
+  var konten = document.getElementById("konten");
+    CKEDITOR.replace(konten,{
+    language:'en-gb'
+  });
+  CKEDITOR.config.allowedContent = true;
+</script>
+
+@endpush
