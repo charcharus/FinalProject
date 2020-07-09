@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Jawaban extends Model
+class KomentarPertanyaan extends Model
 {
-    protected $table = 'jawaban';
-    protected $fillable = ['id', 'user_id', 'pertanyaan_id', 'isi'];
+    protected $table = 'komentar_pertanyaan';
 
     public function user()
     {

@@ -8,4 +8,9 @@ class Pertanyaan extends Model
 {
     protected $table = 'pertanyaan';
     protected $fillable = ['id', 'user_id', 'judul', 'isi', 'tag'];
+
+    public function user()
+    {
+    	return $this->belongsTo(User::class);
+    }
 }
