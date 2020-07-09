@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('layouts.master');
 });
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::post('/pertanyaan', 'PertanyaanController@store')->name('pertanyaan.store');
 
 Route::get('/pertanyaan/create', 'PertanyaanController@create')->name('pertanyaan.create');
@@ -32,3 +36,7 @@ Route::get('/pertanyaan/{id}/delete', 'PertanyaanController@delete');
 Route::get('/jawaban/{pertanyaan_id}', 'JawabanController@index')->name('jawaban.index');
 
 Route::post('/jawaban/{pertanyaan_id}', 'JawabanController@store')->name('jawaban.store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
