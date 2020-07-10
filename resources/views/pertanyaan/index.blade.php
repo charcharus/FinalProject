@@ -19,6 +19,7 @@
 									<table class="table table-hover">
 										<thead>
 											<tr>
+												<th scope="col">No</th>
 												<th>Judul</th>
 												<th>Tag</th>
 												<th>Penulis</th>
@@ -31,6 +32,7 @@
 										<tbody>
 											@foreach($pertanyaan as $pertanyaan)
 												<tr>
+													<th scope="row">{{$loop->iteration}}</th>
 													<td><a href="/pertanyaan/{{$pertanyaan->id}}/detail">{{$pertanyaan->judul}}</td>
 													<td>{{$pertanyaan->tag}}</td>
 													<td>{{$pertanyaan->user->name}}</a></td>
