@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('layouts.master');
 });
 
@@ -39,4 +39,4 @@ Route::post('/jawaban/{pertanyaan_id}', 'JawabanController@store')->name('jawaba
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');

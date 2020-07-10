@@ -22,7 +22,7 @@
 												<th scope="col">No</th>
 												<th>Judul</th>
 												<th>Tag</th>
-												<th>Penulis</th>
+												
 												<th>Dibuat</th>
                                                 <th>Update</th>
                                                 <th>Action</th>
@@ -33,9 +33,9 @@
 											@foreach($pertanyaan as $pertanyaan)
 												<tr>
 													<th scope="row">{{$loop->iteration}}</th>
-													<td><a href="/pertanyaan/{{$pertanyaan->id}}/detail">{{$pertanyaan->judul}}</td>
+													<td>{{$pertanyaan->judul}}</td>
 													<td>{{$pertanyaan->tag}}</td>
-													<td>{{$pertanyaan->user->name}}</a></td>
+													
                                                     <td>{{$pertanyaan->created_at}}</td>
                                                     <td>{{$pertanyaan->updated_at}}</td>
 													<td><a href="/jawaban/{{$pertanyaan_id = $pertanyaan->id}}" class="btn btn-success btn-xs">Jawab</a></td>

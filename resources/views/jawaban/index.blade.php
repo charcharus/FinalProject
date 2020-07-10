@@ -7,9 +7,9 @@
 			<div class="container-fluid">
 <h1>Put Your Answer</h1><br>
 
-<h1>Pertanyaan</h1>
+<h3>Pertanyaan</h3>
 
-<p>{{$pertanyaan->pertanyaan}}</p>
+<p>{{$pertanyaan->isi}}</p>
 
 <form action="/pertanyaan">
     <button type="submit"class="btn btn-primary">Back to Question List</button>
@@ -53,7 +53,7 @@
         @foreach($jawaban as $jawaban)
         <tr>
             <th scope="row">{{$loop->iteration}}</th>
-            <td>{{$jawaban->jawaban}}</td>
+            <td>{{$jawaban->isi}}</td>
         </tr>
         @endforeach
         </tbody>
@@ -64,7 +64,7 @@
 </div>
 @endsection
 
-push('scripts')
+@push('scripts')
 
 <script src="{{asset('/ckeditor/ckeditor.js')}}"></script>
 
