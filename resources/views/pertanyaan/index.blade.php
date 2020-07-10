@@ -22,9 +22,9 @@
 												<th>Judul</th>
 												<th>Tag</th>
 												<th>Penulis</th>
-                                                <th>Action</th>
-                                                <th>Dibuat</th>
+												<th>Dibuat</th>
                                                 <th>Update</th>
+                                                <th>Action</th>
                                                 <th></th>
 											</tr>
 										</thead>
@@ -36,6 +36,7 @@
 													<td>{{$pertanyaan->user->name}}</a></td>
                                                     <td>{{$pertanyaan->created_at}}</td>
                                                     <td>{{$pertanyaan->updated_at}}</td>
+													<td><a href="/jawaban/{{$pertanyaan_id = $pertanyaan->id}}" class="btn btn-success btn-xs">Jawab</a></td>
 													<td><a href="/pertanyaan/{{$pertanyaan->id}}/edit" class="btn btn-warning btn-xs">Edit</a></td>
 													<td><a href="/pertanyaan/{{$pertanyaan->id}}/delete" class="btn btn-danger btn-xs delete" pertanyaan-id="{{$pertanyaan->id}}">Delete</a></td>
 												</tr>
