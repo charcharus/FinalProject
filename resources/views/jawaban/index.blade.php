@@ -22,7 +22,7 @@
 
     <div class="form-group">
 		<label for="">ID Penjawab</label>
-		<input type="text" class="form-control" name="user_id" placeholder="Isi id penjawab yang sudah terdaftar">
+		<input type="text" class="form-control" name="user_id" value="{{$pertanyaan->id}}" placeholder="Isi id penjawab yang sudah terdaftar">
 	</div>
 
     <div class="form-group">
