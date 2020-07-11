@@ -37,6 +37,14 @@ Route::get('/jawaban/{pertanyaan_id}', 'JawabanController@index')->name('jawaban
 
 Route::post('/jawaban/{pertanyaan_id}', 'JawabanController@store')->name('jawaban.store');
 
+Route::get('/komentarpertanyaan/{pertanyaan_id}', 'KomentarPertanyaanController@index')->name('komentarpertanyaan.index');
+
+Route::post('/komentarpertanyaan/{pertanyaan_id}', 'KomentarPertanyaanController@store')->name('komentarpertanyaan.store');
+
+Route::get('/komentarjawaban/{jawaban_id}', 'KomentarJawabanController@index')->name('komentarjawaban.index');
+
+Route::post('/komentarjawaban/{jawaban_id}', 'KomentarJawabanController@store')->name('komentarjawaban.store');
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
