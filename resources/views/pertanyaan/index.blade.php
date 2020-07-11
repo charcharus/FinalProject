@@ -39,6 +39,7 @@
                                                     <td>{{$pertanyaan->created_at}}</td>
                                                     <td>{{$pertanyaan->updated_at}}</td>
 													<td><a href="/jawaban/{{$pertanyaan_id = $pertanyaan->id}}" class="btn btn-success btn-xs">Jawab</a></td>
+													<td><a href="/komentarpertanyaan/{{$pertanyaan_id = $pertanyaan->id}}" class="btn btn-info btn-xs">Komentar</a></td>
 													<td><a href="/pertanyaan/{{$pertanyaan->id}}/edit" class="btn btn-warning btn-xs">Edit</a></td>
 													<td><a href="/pertanyaan/{{$pertanyaan->id}}/delete" class="btn btn-danger btn-xs delete" pertanyaan-id="{{$pertanyaan->id}}">Delete</a></td>
 												</tr>

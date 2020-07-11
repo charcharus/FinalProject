@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\KomentarJawaban;
 use App\User;
 use App\Jawaban;
 use DB;
