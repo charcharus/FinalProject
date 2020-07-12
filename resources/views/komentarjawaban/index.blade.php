@@ -52,7 +52,7 @@
         </thead>
 
         <tbody>
-        @foreach($komentarjawaban as $komentarajawaban)
+        @foreach($komentarjawaban as $komentarjawaban)
         <tr>
             <th scope="row">{{$loop->iteration}}</th>
             <td>{{$komentarjawaban->isi}}</td>
